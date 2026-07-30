@@ -482,6 +482,14 @@
   flex: none;
 }
 
+/* The sentence must be ONE flex item, otherwise every text node and <strong>
+   becomes its own flex item and cannot share a line. */
+.experience-text {
+  flex: 1;
+  min-width: 0;
+  text-wrap: pretty;
+}
+
 /* --- Project cards ----------------------------------------------------- */
 .project-card {
   border: 1px solid var(--border);
