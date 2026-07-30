@@ -1,0 +1,47 @@
+/* ==========================================================================
+   variables.css — design tokens
+   Change a colour here and it updates everywhere. Nothing else needs editing.
+   ========================================================================== */
+
+:root {
+  /* Surfaces */
+  --bg: #0d0f12;
+  --bg2: #14171c;
+  --bg3: #1b1f26;
+
+  /* Text */
+  --fg: #e8eaed;
+  --fg2: #a1a7b0;
+  --fg3: #6b7280;
+
+  /* Lines & accent */
+  --border: #262b33;
+  --accent: oklch(0.80 0.13 162);
+  --accent-fg: #0b0d10;
+  --accent-soft: oklch(0.80 0.13 162 / 0.12);
+
+  /* Type */
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  /* Layout */
+  --page-max: 1160px;
+  --page-gutter: clamp(20px, 5vw, 64px);
+  --nav-height: 90px;
+}
+
+html[data-theme="light"] {
+  --bg: #f6f5f2;
+  --bg2: #ffffff;
+  --bg3: #efeee9;
+
+  --fg: #191b1e;
+  --fg2: #565a60;
+  --fg3: #8a8f96;
+
+  --border: #e4e2dc;
+  --accent: oklch(0.60 0.13 162);
+  --accent-fg: #ffffff;
+  --accent-soft: oklch(0.60 0.13 162 / 0.10);
+}

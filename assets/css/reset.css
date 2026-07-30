@@ -1,0 +1,24 @@
+/* ==========================================================================
+   reset.css — minimal normalisation (matches the original baseline exactly)
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-fg);
+}

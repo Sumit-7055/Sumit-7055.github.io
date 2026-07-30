@@ -1,0 +1,68 @@
+/* ==========================================================================
+   responsive.css — breakpoints, loaded last so it wins the cascade
+   Breakpoints: 900 (tablet) / 760 (small tablet) / 620 (phone) / 420 (small phone)
+   ========================================================================== */
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-media {
+    position: static;
+    top: auto;
+  }
+
+  .about-media .profile-frame {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 760px) {
+  .split,
+  .contact-panel {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .nav-link {
+    display: none;
+  }
+}
+
+@media (max-width: 620px) {
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-title br {
+    display: none;
+  }
+
+  .site-header {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .page {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .experience-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand-name {
+    display: none;
+  }
+}

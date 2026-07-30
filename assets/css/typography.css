@@ -1,0 +1,70 @@
+/* ==========================================================================
+   typography.css — fonts, headings, links, inline emphasis
+   ========================================================================== */
+
+.site {
+  font-family: var(--font-body);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Every <strong> in the page highlights against body copy. */
+strong {
+  color: var(--fg);
+}
+
+/* Small mono label that sits above each section title. */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(28px, 3.4vw, 40px);
+  letter-spacing: -0.02em;
+  margin: 12px 0 0;
+}
+
+.section-title--about {
+  margin: 12px 0 24px;
+}
+
+.section-title--work {
+  margin: 12px 0 10px;
+}
+
+.section-title--sm {
+  font-size: clamp(24px, 2.6vw, 30px);
+  margin: 12px 0 24px;
+}
+
+.section-title--contact {
+  font-size: clamp(28px, 3.4vw, 42px);
+  margin: 12px 0 16px;
+}
+
+.section-footnote {
+  font-size: 14px;
+  color: var(--fg3);
+  margin: 22px 0 0;
+}
+
+/* Intro paragraph under a section title. */
+.section-lede {
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: var(--fg2);
+  margin: 0;
+}

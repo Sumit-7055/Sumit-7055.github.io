@@ -1,0 +1,49 @@
+/* ==========================================================================
+   utilities.css — keyframes, scroll-reveal states, a11y helpers
+   ==========================================================================
+
+   Scroll reveal note
+   ------------------
+   The hidden state is applied by assets/js/animations.js (it adds
+   .reveal-ready). That keeps content visible if JavaScript never runs.
+
+   The reveal uses the `translate` property while card hovers use `transform`,
+   so a card can lift on hover without fighting its reveal state.
+   ========================================================================== */
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.reveal-ready {
+  opacity: 0;
+  translate: 0 22px;
+  transition: opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
+              translate 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.reveal-ready.is-visible {
+  opacity: 1;
+  translate: 0 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-ready,
+  .reveal-ready.is-visible {
+    transition: none;
+  }
+}
+
+/* Visible to screen readers only. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
